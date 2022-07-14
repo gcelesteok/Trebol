@@ -451,8 +451,27 @@ footer{
     }
 
     .img-galeria{
-        width: 45%;
+        width: 100%;
     }
+    .img-galeria2{
+        width: 100%;
+    }
+    .img-galeria3{
+        width: 100%;
+    }
+    
+    .gallery1 {
+        width: 45%;
+        display: inline;
+    } 
+    .gallery2 {
+        width: 45%;
+        display: inline;
+    } 
+    .gallery3 {
+        width: 45%;
+        display: inline;
+    } 
     
     .agregarImagen{
         width: 80%;
@@ -504,10 +523,36 @@ footer{
     }
 
     .img-galeria{
-        width: 95%;
+        width: 100%;
     }
+    .img-galeria2{
+        width: 100%
+    }
+    .img-galeria3{
+        width: 100%;
+    }
+    .gallery1 {
+        width: 90%;
+        display: block;
+    } 
+    .gallery2 {
+        width: 90%;
+        display: block;
+    } 
+    .gallery3 {
+        width: 90%;
+        display: block;
+    } 
     
     .agregar-imagen{
+        width: 90%;
+    }
+
+    .agregar-imagen2{
+        width: 90%;
+    }
+
+    .agregar-imagen3{
         width: 90%;
     }
 
