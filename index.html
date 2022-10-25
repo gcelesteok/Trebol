@@ -1,105 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trebol | Shipping</title>
+    <title>Trebol logistics</title>
+    <link rel="shortcut icon"type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <header class="header" id="inicio">
-        <img class="hamburguer" src="img/hamburguesa.svg" alt="menu">
-        <nav class="menu-navegacion">
-            <a href="#inicio">Inicio</a>
-            <a href="#servicio">Nosotros</a>
-            <a href="#galeria">Servicios</a>
-            <a href="#contacto">Contacto</a>
-            
+        <nav class="navbar navbar-dark bg-light-rgb fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logotipo" src="img/logo250.png" alt=""></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <img class="hamburguer" src="img/hamburguesa.svg" alt="menu">
+                    <!--<span class="navbar-toggler-icon"></span>-->
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                            <div>
+                                <span class="es">Español</span>
+                                <input type="checkbox" class="check">
+                                <span class="en">Inglés</span>
+                            </div> 
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#servicios">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contacto">Contacto</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
         </nav>
+
         <div class="contenedor head">
             <h1 class="titulo">Soluciones logisticas integrales</h1>
             <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            
         </div>
-    </header>    
+    </header>
     <main>
-        <section class="services contenedor" id="servicio">
+        <section class="services contenedor" id="nosotros">
             <h2 class="subtitulo">Nosotros</h2>
             <div class="contenedor-servicio">
-                <img src="img/Logistics_Monochromatic.svg" alt data-aos="zoom-out-up" data-aos-duration="2000" class="aos-init aos-animate">
-                
-                <div  class="checklist-servicio" data-aos="fade-left">
+                <img src="img/nosotros.jpg" alt data-aos="zoom-out-up" data-aos-duration="2000"
+                    class="aos-init aos-animate">
+
+                <div class="checklist-servicio" data-aos="fade-left">
                     <div class="service">
-                        
-                        <p >"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt omnis placeat distinctio esse, sint nisi veniam quas repellendus, sit non ex delectus! Deleniti excepturi ipsum eligendi temporibus reiciendis placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur."</p>
+
+                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt omnis placeat
+                            distinctio esse, sint nisi veniam quas repellendus, sit non ex delectus! Deleniti excepturi
+                            ipsum eligendi temporibus reiciendis placeat. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur."</p>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
-        <section class="gallery" id="galeria">
-            <h2 class="subtitulo">Servicios</h2>
-            <div class="contenedor-gallery" data-aos="fade-up" data-aos-duration="1500">
-                <div class="gallery1">
-                    <section class="gallery">
-                    
-                        <h3 class="n-expert">Titulo uno</h3>
+
+
+        <section class="gallery" id="servicios">
+            <div class="contenedor">
+                <h2 class="subtitulo">Servicios</h2>
+                <div class="contenedor-gallery">
+                    <div class="gallerychild">
+                        <h3 class="n-expert"data-aos="zoom-in">Titulo uno</h3>
                         <div class="contenedor-galeria">
-                            <img src="img/uno.jpg" class="img-galeria" alt="">
-                      
+                            <button id="btn-abrir-modal"data-aos="fade-up" data-aos-duration="1000"><img src="img/uno.png" class="img-galeria" alt="Hola"></button>
+                            <dialog id="modal">
+                                <button id="btn-cerrar-modal"><img src="img/close.svg" alt="" class="close"></button>
+                                <p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit commodi
+                                ad molestias? Amet enim corrupti rem veniam, porro nesciunt? Perspiciatis assumenda quod
+                                excepturi vitae atque incidunt ad officiis fugit!</p>
+                            </dialog>
                         </div>
-                        
-                    </section>    
-                    <div class="imagen-light">
-            
-                        <img src="img/close.svg" alt="" class="close">
+                    </div>
+                    <!--
+                    <h3 class="n-expert">Titulo uno</h3>
+                    <div class="contenedor-galeria">
+                        <button id="btn-abrir-modal"><img src="img/uno.jpg" class="img-galeria" alt="Hola"data-aos="fade-up" data-aos-duration="1000"></button>
+                        <dialog id="modal">
+                            <button id="btn-cerrar-modal"><img src="img/close.svg" alt="" class="close"></button>
+                            <p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit commodi
+                                ad molestias? Amet enim corrupti rem veniam, porro nesciunt? Perspiciatis assumenda quod
+                                excepturi vitae atque incidunt ad officiis fugit!</p>
+                        </dialog>
+                    </div>-->
+                    <div class="gallerychild">
+                        <h3 class="n-expert"data-aos="zoom-in">Titulo dos</h3>
+                        <div class="contenedor-galeria" >
+    
+                            <button id="btn-abrir-modal2"data-aos="fade-up" data-aos-duration="1000"><img src="img/dos.png" class="img-galeria" alt=""></button>
 
-                        <img src="" alt="" class="agregar-imagen">
-                        <div class="txt2">Titulo uno Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit commodi ad molestias? Amet enim corrupti rem veniam, porro nesciunt? Perspiciatis assumenda quod excepturi vitae atque incidunt ad officiis fugit!</div>
-                    </div>     
-                </div> 
-                <div class="gallery2">
-                    <section class="gallery" >
-                        
-                        <h3 class="n-expert">Titulo dos</h3>
-                        <div class="contenedor-galeria">
-                            <img src="img/dos.jpg" class="img-galeria2" alt="">
+                            <dialog id="modal2">
+                                <button id="btn-cerrar-modal2"><img src="img/close.svg" alt="" class="close"></button>
+                                <p class="txt">2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit commodi ad
+                                molestias? Amet enim corrupti rem veniam, porro nesciunt? Perspiciatis assumenda quod
+                                excepturi vitae atque incidunt ad officiis fugit!</p>
+                            </dialog>
                         </div>
-                        
-                    </section>
-                    <div class="imagen-light2">
-            
-                        <img src="img/close.svg" alt="" class="close2">
 
-                        <img src="" alt="" class="agregar-imagen2">
-                        <div class="txt2">Titulo dos Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit commodi ad molestias? Amet enim corrupti rem veniam, porro nesciunt? Perspiciatis assumenda quod excepturi vitae atque incidunt ad officiis fugit!</div>
-
-                    </div>  
-                </div>    
-                <div class="gallery3">
-                    <section class="gallery">
-                        
-                        <h3 class="n-expert">Titulo tres</h3>
-                        <div class="contenedor-galeria">
-                            <img src="img/tres.jpg" class="img-galeria3" alt="">
-
+                    </div>
+                    <div class="gallerychild">
+                        <h3 class="n-expert aos-init aos-animate" data-aos="zoom-in">Titulo tres</h3>
+                        <div class="contenedor-galeria" >
+                            <button id="btn-abrir-modal3"data-aos="fade-up" data-aos-duration="1000"><img src="img/tres.png" class="img-galeria" alt=""></button>
+                            <dialog id="modal3">
+                                <button id="btn-cerrar-modal3"><img src="img/close.svg" alt="" class="close"></button>
+                                <p class="txt">3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit commodi ad
+                                molestias? Amet enim corrupti rem veniam, porro nesciunt? Perspiciatis assumenda quod
+                                excepturi vitae atque incidunt ad officiis fugit!</p>
+                            </dialog>
                         </div>
-                        
-
-                    </section>
-                    <div class="imagen-light3">
-            
-                        <img src="img/close.svg" alt="" class="close3">
-
-                        <img src="" alt="" class="agregar-imagen3">
-                        <div class="txt2">Titulo tres Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit commodi ad molestias? Amet enim corrupti rem veniam, porro nesciunt? Perspiciatis assumenda quod excepturi vitae atque incidunt ad officiis fugit!</div>
-
-                    </div>     
+    
+                    </div>    
                 </div>
-            </div>        
+            </div>
+            
         </section>
         <section class="contenedor" id="contacto">
             <h2 class="subtitulo">Contacto</h2>
@@ -108,20 +153,20 @@
             <section class="experts">
                 <div class="cont-expert">
                     <img src="img/Calling_Isometric (3).svg" alt="">
-                    
-                    <h3 class="n-expert">Teléfono: <a href="#">54 111 111 1111</a></h3>
- 
+
+                    <h4 class="n-expert">Teléfono: <a href="tel:542616490020">54 261 649 0020</a></h4>
+
                 </div>
                 <div class="cont-expert">
                     <img src="img/New Message_Isometric.svg" alt="">
-                    
-                    <h3 class="n-expert"><a href="#">mail@</a></h3>
+
+                    <h4 class="n-expert"><a href="mailto:andres@trebol.com.ar">andres@trebol.com.ar</a></h4>
 
                 </div>
                 <div class="cont-expert">
                     <img src="img/Map_Isometric (1).svg" alt="">
-                    
-                    <h3 class="n-expert">Dirección<a href="#"><i class='bx bx-map'></i></a></h3>
+
+                    <h4 class="n-expert">Dirección<a href="#"><i class='bx bx-map'></i></a></h4>
 
                 </div>
             </section>
@@ -129,39 +174,56 @@
     </main>
     <footer id="footer">
         <div class="contenedor footer-content">
-                <div class="contact-us">
-                    <h2 class="brand">Trebol</h2>
-                    <p>Soluciones logisticas integrales</p>
-                </div>
-                
-                <div class="social-media">
-                    <!--
+            <div class="contact-us">
+                <h2 class="brand"><img src="img/LOG256.png" class="logo"  alt=""></h2>
+                 <!--<p> Andrés Jusza</p>
+                <p>Commercial Manager</p>
+                <p>Mobile & Whatsapp: +54-9-261-649-0020</p>
+                <p>andres@trebol.com.ar / www.trebol.com.ar</p>-->
+
+            </div>
+            <div class="foot">
+                <p> Andrés Jusza</p>
+                <p>Commercial Manager</p>
+                <p>Mobile & Whatsapp: +54-9-261-649-0020</p>
+                <p>andres@trebol.com.ar / www.trebol.com.ar</p>
+
+            </div>
+            
+
+            <div class="social-media">
+                <!--
                     <a href="#" class="social-media-icon">
                         <i class='bx bxl-facebook'></i>
                     </a>
                     <a href="#" class="social-media-icon">
-                        <i class='bx bxl-twitter' ></i>-->
-                    </a>
-                    <a href="https://api.whatsapp.com/send/?phone=%2B5492616490020&text=%C2%A1Hola+Trebol%21+estoy+interesad%40+en+tu+trabajo&type=phone_number&app_absent=0"  target="_blank" class="social-media-icon">
-                        <i class='bx bxl-whatsapp'></i>
-                    </a>
-                </div>
+                        <i class='bx bxl-twitter' ></i>
+                </a>-->
+                <a href="https://api.whatsapp.com/send/?phone=%2B5492616490020&text=%C2%A1Hola+Trebol%21+estoy+interesad%40+en+tu+trabajo&type=phone_number&app_absent=0"
+                    target="_blank" class="social-media-icon">
+                    <i class='bx bxl-whatsapp'></i>
+                </a>
+            </div>
         </div>
         <div class="line"></div>
+
+        <!--
         <div class="up">
             <a href="#inicio" class="up-icon">
                 <i class='bx bxs-chevrons-up'></i>
             </a>
-        </div>
+        </div>-->
 
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
-    <script src="js/lightbox.js"></script>
-    
+    <script src="js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
-
-
-
