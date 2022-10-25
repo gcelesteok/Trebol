@@ -147,7 +147,9 @@ body{
     background: green;
 }
 
-
+.offcanvas{
+    max-width: 80% !important;
+}
 /* Menu 2*/
 .titulo3{
     color:black;
@@ -410,6 +412,7 @@ footer{
     width:30%;
     color: #fff;
     text-align: center;
+    justify-content: center;
 }
 .contact-us{
     width: 30%;
@@ -485,6 +488,9 @@ footer{
 
 /*RESPONSIVE*/
 @media screen and (max-width: 800px){
+    .offcanvas{
+        max-width: 60% !important;
+    }
  
     .titulo{
         font-size: 40px;
@@ -531,27 +537,34 @@ footer{
     }
 
     .contact-us{
-        text-align: center;
         width: 80%;
+        /*text-align: center;
         justify-content: center;
         /*margin-bottom: 40px;*/
     }
   
     .foot{
         width:80%;
+        color: #fff;
         text-align: center;
+        justify-content: center;
         margin-bottom: 40px;
     }
-    
+ 
     .logo{
-        width:40%;
+        width:35%;
+        margin: auto;
+        display: block;
 
     }
 }
 
 
 @media screen and (max-width: 550px){
-  
+
+    .offcanvas{
+        max-width: 50% !important;
+    }
 
     .hamburguer{
         top: 20px;
@@ -588,14 +601,17 @@ footer{
     .contact-us{
         text-align: center;
         width: 100%;
-        /*margin-bottom: 10px;*/
-        justify-content: center;
+        /*margin-bottom: 10px;
+        justify-content: center;*/
     }
   
-    foot{
+    .foot{
         width:100%;
     }
     .logo{
-        width:40%;
+        width:35%;
+        margin: auto;
+        display: block;
+
     }
 }
